@@ -1,0 +1,11 @@
+BACKBONE:
+  NAME: 'clip'
+  FILE: 'RN50x4_clip.pt'   
+  FINETUNE: False
+  LAYERS_TO_EXTRACT: ['layer1.3.relu3','layer2.5.relu3','layer3.9.relu3','layer4.5.relu3']
+  PERCENT_OF_CHANNELS: 100
+  INPUT_SIZE: (288,288)
+
+TRAIN:
+  BATCH_SIZE: 4
+  MAX_EPOCHS: 10

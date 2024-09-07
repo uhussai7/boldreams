@@ -1,0 +1,11 @@
+BACKBONE:
+  NAME: 'vgg11'
+  FILE: 'vgg11.pt'   
+  FINETUNE: False
+  LAYERS_TO_EXTRACT: ['features.2','features.5','features.7','features.10','features.12','features.15','features.17','features.20']
+  PERCENT_OF_CHANNELS: 100
+  INPUT_SIZE: (224,224)
+
+TRAIN:
+  BATCH_SIZE: 4
+  

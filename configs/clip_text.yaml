@@ -1,0 +1,13 @@
+BACKBONE:
+  NAME: 'clip_text'
+  FILE: 'RN50x4_clip.pt'   
+  FINETUNE: False
+  TEXT: True
+  LAYERS_TO_EXTRACT: ['last']
+  PERCENT_OF_CHANNELS: 100
+  INPUT_SIZE: (256,256)
+  NT: 640
+
+TRAIN:
+  BATCH_SIZE: 16
+  MAX_EPOCHS: 30
