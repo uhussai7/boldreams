@@ -32,6 +32,8 @@ def get_corr(backbone,subj,percent,finetune,version=0):
     corr_path=Path(str(create_dir_name(cfg,subj))+'/lightning_logs/version_%d/predictions/'%version)
     return torch.load(str(corr_path) + '/corr_combined.pt')
 
+
+# for i range(0,)
 fig,ax=plt.subplots()
-xmas_plot(get_corr('alexnet',1,1,False),get_corr('alexnet',1,100,False),ax)
+xmas_plot(get_corr('vgg11',1,1,True),get_corr('vgg11',1,100,True),ax)
 plt.savefig('/home/u2hussai/scratch/test.png')
