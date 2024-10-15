@@ -8,4 +8,4 @@ After downloading the dataset, we need to define some paths as environment varia
 Training is done with <a href='https://lightning.ai/docs/pytorch/stable/'> lightning </a> and is configurable with `.yaml` files. Various examples of such config files can be found in `/configs/`. A simple example is `alexnet.yaml`. Here one can define various parameters of the training, for example, which layers to use for feature extraction, `LAYERS_TO_EXTRACT`, and the percentage of filters to use per layer, `PERCENT_OF_CHANNELS`. A typical training script can be found in `/scripts/training_script.py`. The predictions are relatively straightforward and can be conducted using `/scripts/prediction_script.py`. 
 
 ### Dreams
-
+We adapt the <a https://github.com/greentfrapp/lucent> lucent </a> package to generate dreams with objective functions involving brain regions and voxels. One natural objective is to maximally activate an particule ROI, although any objective function can be defined. In `/scripts/dreams/abstract.py` we show typical usuage with objectives that maximally activate an ROI and also an objective function that promotes diversity in the dreams. 
