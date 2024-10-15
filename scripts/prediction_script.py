@@ -38,13 +38,15 @@ def main():
 
     parser.add_argument(
         '-f','--finetune',
-        type=lambda x: (str(x).lower() in ['true', '1', 'yes']), required=True,
+        type=lambda x: (str(x).lower() in ['true', '1', 'yes']),
+        default=False,
         help='Flag to toggle bacbone finetuning, True will finetune backbone'
     )
 
     parser.add_argument(
         '-p','--percent',
         type=int,
+        default=100,
         help='Percentage of total filters per layer to extract for readout'
     )
 

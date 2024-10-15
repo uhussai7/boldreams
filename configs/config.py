@@ -20,7 +20,10 @@ _C.PATHS.BACKBONE_FILES=os.environ.get('BACKBONE_ROOT_PATH')
 _C.PATHS.NSD_PREPROC=os.environ.get('NSD_PREPROC_PATH') #environment variable 
 _C.PATHS.NSD_ENCODER=os.environ.get('NSD_ENCODER_PATH') #environment variable #this is where models are saved
 _C.PATHS.NSD_CONFIG=os.environ.get('NSD_CONFIG_PATH')
-_C.PATHS.NSD_TEXT=os.environ.get('NSD_TEXT_PATH') #this is to store text related stuff, text embeddings etc
+_C.PATHS.NSD_TEXT=os.environ.get('NSD_TEXT_PATH') 
+_C.PATHS.NSD_PLOTS=os.environ.get('NSD_PLOTS_PATH') 
+_C.PATHS.NSD_DREAMS=os.environ.get('NSD_DREAMS_PATH') 
+
 
 #Files
 _C.PATHS.EXP_DESIGN_FILE=os.path.join(_C.PATHS.NSD_ROOT,'nsddata','experiments','nsd','nsd_expdesign.mat')
@@ -48,9 +51,11 @@ _C.BACKBONE.INPUT_SIZE= (227,227)
 _C.BACKBONE.NT=None #output vector size of text encoder
 
 #Dreams
-_C.DREAMS.ROTATE=1
-_C.DREAMS.TRANSLATE=(0.1,0.1)
-_C.DREAMS.SCALE=(1,1)
+_C.DREAMS.LR= 5e-3
+_C.DREAMS.ROTATE= 1.0
+_C.DREAMS.TRANSLATE= (0.1,0.1)
+_C.DREAMS.SCALE= (1,1)
+_C.DREAMS.THRESHOLDS= (512,)
 
 def get_cfg_defaults():
   """Get a yacs CfgNode object with default values for my_project."""

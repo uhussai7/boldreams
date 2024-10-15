@@ -8,4 +8,8 @@ BACKBONE:
 
 TRAIN:
   BATCH_SIZE: 4
-  
+
+DREAMS:
+  THRESHOLDS: (1200,)
+  SCALE: (0.4,0.9)
+  LR: 1e-2

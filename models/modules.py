@@ -300,5 +300,36 @@ class TextFeatures(ImageFeatures): #seems like taking only the last layer is suf
     def get_feature_extractor(self): #only thing thats changed is that we are using tx library instead of torchvision
         self.feature_extractor=tx.Extractor(self.backbone,cfg.BACKBONE.LAYERS_TO_EXTRACT)
 
+class integrated_gradient(Module):
+    """
+    A simple module to compute integrated gradients
+    """
+    def __init__(self,feature_ext):
+        """
+        Initializer
+        :param model: The wrapped fmri encoding model
+        """
+        super(integrated_gradient, self).__init__()
+        self.feature_ext=feature_ext
+
+    def forward(self,img_in,roi,I_0=None,steps=10):
+
+        img=torch.clone(img_in.detach())
+        img.requires_grad=True
+        optimizer=Adam(lr=2e-2,params=[img])
+
+        if I_0 is None:
+            I_0=torch.zeros_like(img)
+            I_0.requires_grad=True
+
+        ig = []
+        alphas = torch.linspace(0, 1, steps)
+        for alpha in alphas:
+            imgp=I_0 + alpha*(img-I_0)
+            features=self.feature_ext(imgp)
+            features[:,roi].mean().backward()
+            ig.append(img.grad)
+
+        return torch.stack(ig).detach().cpu().abs().mean([0,1])
 
 
