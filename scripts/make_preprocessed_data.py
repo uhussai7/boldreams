@@ -32,5 +32,5 @@ print('Done.')
 
 #Save preprocessed
 print('Saving...')
-nsd_data.save_preprocessed()
+#nsd_data.save_preprocessed()
 print('Done')

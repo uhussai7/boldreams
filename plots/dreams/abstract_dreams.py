@@ -138,7 +138,7 @@ class model_params:
         return dream#mask.moveaxis(0,-1)
 
 
-dream_id_dic={'1':{'V1':0,'V2':0,'V3':0, 'V3ab':0,'floc-faces':0,'floc-places':1,'floc-bodies':3,'floc-words':3},
+dream_id_dic={'1':{'V1':0,'V2':0,'V3':0, 'V3ab':0,'floc-faces':1,'floc-places':1,'floc-bodies':3,'floc-words':3},
                 '2':{'V1':0,'V2':0,'V3':0, 'V3ab':0,'floc-faces':0,'floc-places':0,'floc-bodies':0,'floc-words':0},
                 '5':{'V1':0,'V2':0,'V3':0, 'V3ab':0,'floc-faces':0,'floc-places':0,'floc-bodies':0,'floc-words':0},
                 '7':{'V1':0,'V2':0,'V3':0, 'V3ab':0,'floc-faces':0,'floc-places':0,'floc-bodies':0,'floc-words':0},
