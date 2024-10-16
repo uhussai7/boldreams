@@ -15,3 +15,8 @@ Here is an example of the dreams for `subj01` that maximize activation in the fa
 <img src='https://github.com/uhussai7/images/blob/main/dreams.png' align='center' width='1080'>
 
 Each coloumn shows the backbone used, for example, `Alexnet-25-False` denotes the Alexnet backbone, 25% of filters per layer and finetuning off. The second row shows a word cloud of top nouns where the similarity score is predicted using <a href='https://github.com/openai/CLIP'>CLIP</a>.
+
+Here is an example for the same subject, dreams that maximize activation in the place related areas,
+<img src='https://github.com/uhussai7/images/blob/main/places.png' align='center' width='1080'>
+
+We see that the `CLIP` backbone (RN50x4) creates the most elborate dreams.
