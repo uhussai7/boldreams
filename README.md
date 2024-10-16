@@ -28,4 +28,9 @@ We can also generate dreams for retinotopic eccentricity ROIs,
 <img src='https://github.com/uhussai7/images/blob/main/ecc_dream.png' align='center' width='640'>
 
 
+### Implicit attention
+We use the <a href='https://arxiv.org/abs/1703.01365'>integrated gradients</a> approach to calculated saliency maps for each ROI. Here are some examples of faces, bodies and places ROIs respectively,
 
+<img src='https://github.com/uhussai7/images/blob/main/attention.png' align='center' width='640'>
+
+ 
