@@ -19,4 +19,13 @@ Each coloumn shows the backbone used, for example, `Alexnet-25-False` denotes th
 Here is an example for the same subject, dreams that maximize activation in the place related areas,
 <img src='https://github.com/uhussai7/images/blob/main/places.png' align='center' width='1080'>
 
-We see that the `CLIP` backbone (RN50x4) creates the most elborate dreams.
+We see that the `CLIP` backbone (RN50x4) creates the most elborate dreams. 
+
+Here is an example with the `CLIP` backbone (RN50x4) and a small diversity term in the objective,
+<img src='https://github.com/uhussai7/images/blob/main/places_diversity.png' align='center' width='640'>
+
+We can also generate dreams for retinotopic eccentricity ROIs,
+<img src='https://github.com/uhussai7/images/blob/main/ecc_dream.png' align='center' width='640'>
+
+
+
