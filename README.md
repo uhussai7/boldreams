@@ -1,7 +1,7 @@
 # BOLDreams
 boldreams is a suite of tools to train neural encoding models using the <a href=https://naturalscenesdataset.org/>Natural Scenes Dataset(NSD)</a>. The family of encoding models we deal with are the ones based on a pre-trained visual or text backbone. Here, a particular focus is on the interpretability and explainability (xAI) of these models.
 
-(detailed documentation coming soon..)
+##(detailed documentation coming soon..)
 
 ### Configuration and data handling
 After downloading the dataset, we need to define some paths as environment variables, these can be found in `/configs/config.py`. An approach we take here is to create a preprocessed dataset that only contains the visual cortex voxels. This is done with the `nsdhandling` class, sample usage can be found in `/scripts/make_preprocessed_data.py`.
