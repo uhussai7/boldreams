@@ -23,7 +23,7 @@ Here is an example for the same subject, dreams that maximize activation in the 
 
 We see that the `CLIP` backbone (RN50x4) creates the most elaborate dreams. 
 
-Here is an example with the `CLIP` backbone (RN50x4) and a small diversity term in the objective,
+Here is an example with the `CLIP` backbone (RN50x4) for the places brain area with a small diversity term in the objective,
 <img src='https://github.com/uhussai7/images/blob/main/places_diversity.png' align='center' width='640'>
 
 We can also generate dreams for retinotopic eccentricity ROIs,
